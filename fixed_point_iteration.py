@@ -61,7 +61,7 @@ def fpi_iter(fn,num_iter, init_):
     return y
 
 
-print('iterative:',fpi_iter(lambda x: np.exp(-2*x),100,0.7831))
+print('iterative:',fpi_iter(lambda x: np.exp(-2*x),1000,0.7831))
 print('recursive:')
 fpi_recur(lambda x: np.exp(-2*x),0.5)
 
