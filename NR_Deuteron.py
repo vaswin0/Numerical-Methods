@@ -1,4 +1,4 @@
-''' Deutron potential well
+''' Deuteron potential well
 Aswin
 October 5  2020'''
 
