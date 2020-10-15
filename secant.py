@@ -6,7 +6,7 @@ October 5 2020
 
 
 import numpy as np #numerical python library
-import sys
+
 
 
 
@@ -14,7 +14,8 @@ def is_approx(x,y):
     '''Function to check
     convergence
     ARGS: x,y
-    RETURN: bool'''
+    RETURN: bool
+    '''
     return (abs(x-y) < 0.000000000001)
 
 
@@ -26,7 +27,7 @@ def secant(f,num_iter, x0,x1):
     '''Iterative implementation
     ARGS: function
           number of iteration
-          init_-initial value
+          init_ :initial value
     Returns: y,root
 
     '''
@@ -47,7 +48,7 @@ def secant(f,num_iter, x0,x1):
     return x
 
 
-f = lambda x:25*x**4 - x**2/2 -2 
+f = lambda x:25*x**4 - (x**2)/2 -2 
 print()
 root = secant(f ,10000,1,2)
 print()
