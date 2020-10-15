@@ -1,4 +1,5 @@
 ''' Deuteron potential well
+using Newton-Raphson
 Aswin
 October 5  2020'''
 
@@ -22,7 +23,7 @@ def gradient(f, x):
 
 
 
-def NR_iter(fn,num_iter, init_):
+def NR_iter(fn,num_iter, init_,v0):
     '''Iterative implementation
     ARGS: fn : function
           Num_iter : number of iteration
@@ -30,6 +31,9 @@ def NR_iter(fn,num_iter, init_):
     Returns: y : root
 
     '''
+    if init_ > v0:
+        print('E > V0')
+        return
     x = init_
     for i in range(num_iter):
         
@@ -51,6 +55,8 @@ h_ = 1        #h_bar
 
 
 f = lambda x:np.sqrt(2*m*(v0-abs(x)))*(1/np.tan(np.sqrt(2*m*a**2*abs(v0-x))/h_)) + np.sqrt(2*m*abs(x))
-root = NR_iter(f, 20, 0.011)
-print('root = ', root,'MeV')
-print('f(root) = ',f(root) )
+root = NR_iter(f, 20, 0.011,v0)
+print()
+if root != None:
+    print('root = ', root,'MeV')
+    print('f(root) = ',f(root) )
