@@ -1,4 +1,5 @@
-''' Birge Vieta
+'''
+Birge Vieta
 Aswin
 October 15  2020'''
 
@@ -49,5 +50,8 @@ def birge_vieta(p,num_iter, init_):
 
 p = lambda x:x**4 + (30/9)*x**3 +(34/9)*x**2 + (30/9)*x + 25/9
 root = birge_vieta(p, 100, 1)
+
+print()
+
 print('root = ', root)
 print('p(root) = ',p(root) )
