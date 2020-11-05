@@ -1,3 +1,9 @@
+/*Newton's divided difference
+ * Aswin
+ * Nov 20202
+ */
+
+
 #include<stdio.h>
 #include<math.h>
 const int num_points = 3;
@@ -44,7 +50,7 @@ int main() {
 	 double pol = 0;
     double prod ;
     double z = 3.5;
-	int i,j;
+	 int i,j;
 
 	for(i=1;i<num_points;i++) {
       
