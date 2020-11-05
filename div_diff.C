@@ -1,6 +1,6 @@
 /*Newton's divided difference
  * Aswin
- * Nov 20202
+ * Nov 2020
  */
 
 
